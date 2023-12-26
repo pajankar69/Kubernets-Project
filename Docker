@@ -1,6 +1,6 @@
 FROM centos:latest
 MAINTAINER pajankar69@gmail.com
-  zip \
+ zip \
  unzip
 ADD https://www.free-css.com/assets/files/free-css-templates/download/page296/spering.zip /var/www/html
 WORKDIR /var/www/html
