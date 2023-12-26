@@ -1,0 +1,11 @@
+FROM centos:latest
+MAINTAINER pajankar69@gmail.com
+  zip \
+ unzip
+ADD https://https://www.free-css.com/assets/files/free-css-templates/download/page296/spering.zip /var/www/html
+WORKDIR /var/www/html
+RUN unzip spering.zip
+RUN cp -rvf spering/*
+RUN rm -rf spering spering.zip
+CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
+EXPOSE 80
